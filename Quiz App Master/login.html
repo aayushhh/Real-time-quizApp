@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/login.css" />
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+
+</head>
+<body>
+<div class="container">
+<h2>Welcome to Quiz </h2>
+<h4>Just take some moment to login is not a user just signup and be our guest</h4>
+
+
+<button id="btnLogin" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Join Quiz</button>
+
+
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" id="Login_form" method="post" action="submit">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img_avatar2.png" alt="Login" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" id="uname" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" id ="psw"name="psw" required>
+      <label>
+        <input type="checkbox" checked="unchecked" name="Student" id="student"> Student
+      </label>
+      <label>
+        <input type="checkbox" checked="unchecked" name="Faculty" id="faculty"> Faculty
+      </label>
+      <button type="submit"onclick="clear()"value="Reset">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+      <span class="psw">
+        <a href="#id02">New User?</a> </span>
+    </div>
+  </form>
+</div>
+</div>
+
+<script>
+  function clear() {
+     document.getElementById("Login_from").reset();
+  }
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+  
+
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
+<script src="js/login.js"></script>
+</body>
+
+</html>

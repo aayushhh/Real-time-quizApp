@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="/socket.io/socket.io.js">
+  
+    </script>
+    <title>Quick Quiz Sukshi Academy</title>
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="home" class="flex-center flex-column">
+        <h1>
+                Quiz <br>Sukshi Academy</h1>
+        <a class="btn" href="game.html">Play</a>
+        <a class="btn" href="highscores.html">High Scores</a>
+        <a class="btn" href="questions.html">Faculty</a>
+        
+        
+      </div>
+    </div>
+    <script>
+      let socket =io();
+      // socket.on('connection',() =>{
+      //   console.log ('connected'+ socket.id);
+
+      // })
+      var testJson = {
+"question": "what is your name",
+"option1": "djdjfnj",
+"option2": "fefejfnj"
+}
+      socket.emit('Nitin', testJson)
+      socket.on('msg', data =>{
+        console.log (data);
+      })
+
+    </script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<!-- <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script> -->
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+
+
+  </body>
+</html>
+
+

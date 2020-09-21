@@ -1,0 +1,87 @@
+body{
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: #9e8f8f;
+    
+    color: #ffffff;
+    height: 100vh;
+    width: 100%;
+}
+
+#form{
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+    padding: 40px;
+    background-color: #b99292ed;
+}
+#form h1{
+    margin-bottom:40px;
+}
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: rgba(128, 206, 226, 0.575);
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  input[type=text]:focus {
+    width: 100%;
+  }
+  button1 {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #af984c;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  .button:hover {background-color: #3e8e41}
+  
+  .button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  .button1:hover {background-color: #dbc129}
+  
+  .button1:active {
+    background-color: #b8b641;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+.centerForm{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width:50%
+}
